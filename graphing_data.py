@@ -54,10 +54,7 @@ mega_list = [] #for putting all the rows in one list; could help with processing
 x = []
 y = []
 
-#realized that I don't need to use dictionaries until later; could eventually fix so that only lists are used
-titles_dict = {}
-data_dict = {}
-
+#for storing titles and lists
 titles_list = []
 data_list = []
 
@@ -111,7 +108,6 @@ elif "MANTA" in file.upper():
     independent_index = 1
 
 for j in range(0, len(mega_list[0])):
-    titles_dict[j] = mega_list[0][j]
     titles_list.append(mega_list[0][j])
     for k in range (1, len(mega_list)): #starting at one since title is in first row, which we don't want graphed
         if convert_to_float:
@@ -120,7 +116,6 @@ for j in range(0, len(mega_list[0])):
         else:
             x.append(mega_list[k][independent_index])
             y.append(mega_list[k][j])
-    data_dict[j] = [x, y]
     data_list.append([x, y])
     x = []
     y = []
@@ -128,7 +123,7 @@ for j in range(0, len(mega_list[0])):
 #print(titles_dict)
 
 #stackoverflow: https://stackoverflow.com/questions/33139496/how-to-plot-several-graphs-and-make-use-of-the-navigation-button-in-matplotlib
-toggle = [0, len(data_dict)]
+toggle = [0, len(data_list)]
 counter = 1
 
 def onclick(event):
@@ -137,17 +132,17 @@ def onclick(event):
 
     event.canvas.figure.clear()
 
-    plt.plot(data_dict[counter][0], data_dict[counter][1], marker=".", markersize=10)
-    plt.title(titles_dict[counter] + " - Plot " + str(counter+1) + " of " + str(len(titles_dict)))
-    plt.ylabel(titles_dict[counter])
-    plt.xlabel(titles_dict[independent_index])
+    plt.plot(data_list[counter][0], data_list[counter][1], marker=".", markersize=10)
+    plt.title(titles_list[counter] + " - Plot " + str(counter+1) + " of " + str(len(titles_list)))
+    plt.ylabel(titles_list[counter])
+    plt.xlabel(titles_list[independent_index])
     plt.yticks (fontsize = 6)
     plt.xticks(fontsize = 6, rotation = 60)
     plt.grid()
 
     counter += 1
 
-    if counter >= len(titles_dict):
+    if counter >= len(titles_list):
         counter = 0
 
     event.canvas.draw()
@@ -155,10 +150,10 @@ def onclick(event):
 fig = plt.figure()
 fig.canvas.mpl_connect('button_press_event', onclick)
 
-plt.plot(data_dict[0][0], data_dict[0][1])
-plt.title(titles_dict[0] + " - Plot 1 of " + str(len(titles_dict)) + " (Click on this window to see other graphs)")
-plt.ylabel(titles_dict[0])
-plt.xlabel(titles_dict[independent_index])
+plt.plot(data_list[0][0], data_list[0][1], marker=".", markersize=10)
+plt.title(titles_list[0] + " - Plot 1 of " + str(len(titles_list)) + " (Click on this window to see other graphs)")
+plt.ylabel(titles_list[0])
+plt.xlabel(titles_list[independent_index])
 plt.yticks (fontsize = 6)
 plt.xticks(fontsize = 6, rotation = 60)
 plt.grid()
