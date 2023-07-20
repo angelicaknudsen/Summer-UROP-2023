@@ -1,0 +1,39 @@
+% Device,11B100023,,,,,,
+% File name,11B100023_20230613_190455,,,,,,
+% Cast time (UTC),2023-06-13 19:04:55,,,,,,
+% Cast time (local),2023-06-13 15:04:55,,,,,,
+% Sample type,Cast,,,,,,
+% Cast data,Processed,,,,,,
+% Location source,GPS,,,,,,
+% Default latitude,32,,,,,,
+% Default altitude,0,,,,,,
+% Start latitude,41.6957588,,,,,,
+% Start longitude,-70.6202763,,,,,,
+% Start altitude,-30.21999931,,,,,,
+% Start GPS horizontal error(Meter),2.210000038,,,,,,
+% Start GPS vertical error(Meter),2.279999971,,,,,,
+% Start GPS number of satellites,8,,,,,,
+% End latitude,,,,,,,
+% End longitude,,,,,,,
+% End altitude,,,,,,,
+% End GPS horizontal error(Meter),,,,,,,
+% End GPS vertical error(Meter),,,,,,,
+% End GPS number of satellites,,,,,,,
+% Cast duration (Seconds),49,,,,,,
+% Samples per second,5,,,,,,
+% Electronics calibration date,2001-01-01,,,,,,
+% Conductivity calibration date,2011-02-25,,,,,,
+% Temperature calibration date,2011-02-25,,,,,,
+% Pressure calibration date,2011-02-25,,,,,,
+%,,,,,,,
+Pressure (Decibar),Depth (Meter),Temperature (Celsius),Conductivity (MicroSiemens per Centimeter),Specific conductance (MicroSiemens per Centimeter),Salinity (Practical Salinity Scale),Sound velocity (Meters per Second),Density (Kilograms per Cubic Meter)
+0.15,0.1501309181,20.07321313,38895.18355,43146.67277,27.67957154,1513.517853,1019.171511
+0.45,0.450394268,19.97730719,38852.7479,43191.50069,27.7087722,1513.283934,1019.21924
+0.75,0.7506021256,19.8956527,39262.22812,43726.09123,28.08777497,1513.479561,1019.529258
+1.05,1.050680698,19.70940339,39962.31909,44691.1791,28.77231049,1513.71894,1020.098107
+1.35,1.350646271,19.62326148,40178.13294,45019.26978,29.00462244,1513.738129,1020.297851
+1.65,1.650571981,19.6309503,40303.28472,45151.72145,29.09977025,1513.871327,1020.369658
+1.95,1.950473897,19.65671496,40482.05298,45325.82951,29.22544613,1514.090053,1020.460153
+2.25,2.250347443,19.65627603,40647.71786,45511.76394,29.35884863,1514.242826,1020.56312
+2.55,2.550187655,19.63158019,40816.95659,45726.54207,29.51227135,1514.349013,1020.687447
+2.891885512,2.891858171,19.69099406,41009.63408,45881.31787,29.62539958,1514.649919,1020.760079
